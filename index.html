@@ -15,7 +15,7 @@
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
-    <!-- Google Fonts (Poppins & Orbitron for Gaming Vibe) -->
+    <!-- Google Fonts (Poppins & Orbitron) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800;900&amp;family=Poppins:wght@300;400;600;700&amp;display=swap" rel="stylesheet">
@@ -32,17 +32,17 @@
             font-family: 'Orbitron', sans-serif;
         }
 
-        /* Animated Glowing Text & Borders */
+        /* Glowing Text & Borders */
         .gold-glow-text {
             text-shadow: 0 0 15px rgba(234, 179, 8, 0.7), 0 0 30px rgba(234, 179, 8, 0.4);
         }
 
         .gold-glow-box {
-            box-shadow: 0 0 25px rgba(234, 179, 8, 0.3), inset 0 0 15px rgba(234, 179, 8, 0.1);
+            box-shadow: 0 0 25px rgba(234, 179, 8, 0.35), inset 0 0 15px rgba(234, 179, 8, 0.1);
         }
 
-        .neon-glow-box {
-            box-shadow: 0 0 20px rgba(168, 85, 247, 0.3);
+        .green-glow-badge {
+            box-shadow: 0 0 12px rgba(34, 197, 94, 0.5);
         }
 
         /* Float & Pulse Animations */
@@ -52,8 +52,8 @@
         }
 
         @keyframes pulseGlow {
-            0%, 100% { transform: scale(1); opacity: 0.9; }
-            50% { transform: scale(1.05); opacity: 1; filter: drop-shadow(0 0 25px rgba(234, 179, 8, 0.9)); }
+            0%, 100% { transform: scale(1); opacity: 0.95; }
+            50% { transform: scale(1.06); opacity: 1; filter: drop-shadow(0 0 30px rgba(234, 179, 8, 0.9)); }
         }
 
         .floating-emoji {
@@ -64,7 +64,7 @@
             animation: pulseGlow 2.5s ease-in-out infinite;
         }
 
-        /* Particle Background Styling */
+        /* Particle Background Canvas */
         #particles-canvas {
             position: fixed;
             top: 0;
@@ -78,6 +78,7 @@
 
 
 
+    <!-- Background Particle Canvas -->
     <canvas id="particles-canvas"></canvas>
 
     <!-- CONTENT WRAPPER -->
@@ -86,6 +87,7 @@
         <header class="w-full border-b border-gray-800/80 bg-gray-900/60 backdrop-blur-md sticky top-0 z-50">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
                 <div class="flex items-center space-x-3">
+                    <span class="text-3xl">🔱</span>
                     <span class="font-orbitron font-extrabold text-xl sm:text-2xl bg-gradient-to-r from-yellow-400 via-amber-300 to-yellow-500 bg-clip-text text-transparent">
                         STEAL THE BRAINROT
                     </span>
@@ -99,34 +101,33 @@
             </div>
         </header>
 
-        <!-- MAIN HERO & NEWS SECTION -->
-        <main class="flex-grow max-w-6xl mx-auto px-4 py-8 sm:py-12 w-full flex flex-col gap-12">
+        <main class="flex-grow max-w-6xl mx-auto px-4 py-8 sm:py-12 w-full flex flex-col gap-10">
 
             <section class="text-center space-y-4">
-                <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-yellow-500/10 border border-yellow-500/30 text-yellow-400 text-xs sm:text-sm font-semibold tracking-wide">
-                    <span class="w-2 h-2 rounded-full bg-yellow-400 animate-ping"></span>
-                    MAJOR UPDATE ANNOUNCEMENT
+                <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/40 text-emerald-400 text-xs sm:text-sm font-semibold tracking-wide">
+                    <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-ping"></span>
+                    UPDATE COMPLETED &amp; LIVE NOW
                 </div>
                 <h1 class="text-4xl sm:text-6xl font-black font-orbitron tracking-tight text-white">
                     ABOUT OF THE <span class="bg-gradient-to-r from-yellow-400 via-amber-300 to-yellow-500 bg-clip-text text-transparent gold-glow-text">STEAL THE BRAINROT</span>
                 </h1>
                 <p class="text-gray-400 max-w-2xl mx-auto text-base sm:text-lg">
-                    Dapatkan maklumat terkini mengenai permainan, berita kemaskini, dan berita khas tentang emoji terbaharu yang akan datang!
+                    Kemaskini terbaharu telah rasmi dilaksanakan! Emoji kraf khas kini telah siap dibuat dan sedia untuk dimainkan secara langsung.
                 </p>
             </section>
 
             <section class="relative rounded-3xl bg-gradient-to-b from-gray-900/90 to-gray-950/90 border border-yellow-500/40 p-6 sm:p-10 gold-glow-box overflow-hidden">
                 <div class="absolute -top-24 -right-24 w-72 h-72 bg-yellow-500/10 rounded-full blur-3xl pointer-events-none"></div>
-                <div class="absolute -bottom-24 -left-24 w-72 h-72 bg-purple-600/10 rounded-full blur-3xl pointer-events-none"></div>
+                <div class="absolute -bottom-24 -left-24 w-72 h-72 bg-emerald-600/10 rounded-full blur-3xl pointer-events-none"></div>
 
                 <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
                     
                     <!-- Left Column: Emoji Display -->
-                    <div class="lg:col-span-5 flex flex-col items-center justify-center p-6 bg-gray-900/50 rounded-2xl border border-yellow-500/20 text-center relative group">
-                        <div class="absolute top-3 right-3 bg-gradient-to-r from-yellow-500 to-amber-600 text-black font-orbitron font-extrabold text-xs px-3 py-1 rounded-full uppercase tracking-wider">
-                            NEW EMOJI
+                    <div class="lg:col-span-5 flex flex-col items-center justify-center p-6 bg-gray-900/60 rounded-2xl border border-yellow-500/30 text-center relative group">
+                        <div class="absolute top-3 right-3 bg-gradient-to-r from-emerald-500 to-teal-500 text-black font-orbitron font-black text-xs px-3 py-1 rounded-full uppercase tracking-wider green-glow-badge">
+                            AVAILABLE NOW
                         </div>
-                        <div class="text-8xl sm:text-9xl my-6 floating-emoji pulse-golden select-none filter drop-shadow-[0_0_20px_rgba(234,179,8,0.6)]">
+                        <div class="text-8xl sm:text-9xl my-6 floating-emoji pulse-golden select-none filter drop-shadow-[0_0_25px_rgba(234,179,8,0.7)]">
                             🔱
                         </div>
                         <h3 class="text-2xl sm:text-3xl font-black font-orbitron text-yellow-400 tracking-wide gold-glow-text">
@@ -135,33 +136,33 @@
                         <p class="text-xs text-yellow-300/80 font-mono mt-1">ID: #EMOJI-GOLD-01</p>
                     </div>
 
-                    <!-- Right Column: Update Info & CTA -->
+                    <!-- Right Column: Live Update Details & Call To Action -->
                     <div class="lg:col-span-7 space-y-6">
                         <div class="flex items-center gap-3">
-                            <span class="px-3 py-1 rounded-lg bg-red-500/20 border border-red-500/40 text-red-400 font-orbitron text-xs font-bold uppercase tracking-wider">
-                                Coming Soon
+                            <span class="px-3.5 py-1 rounded-lg bg-emerald-500/20 border border-emerald-500/50 text-emerald-400 font-orbitron text-xs font-bold uppercase tracking-wider">
+                                UPDATED NOW
                             </span>
-                            <span class="text-gray-400 text-xs">Akan Datang Tidak Lama Lagi</span>
+                            <span class="text-gray-300 text-xs font-semibold">Telah Berjaya Di-Update Dalam Game!</span>
                         </div>
 
                         <h2 class="text-2xl sm:text-4xl font-extrabold font-orbitron text-white leading-tight">
-                            Persiapkan Diri Anda Untuk Emoji Legendaris Terbaharu!
+                            Emoji "The golden boset" 🔱 Telah Siap Dibuat &amp; Dikemaskini!
                         </h2>
 
                         <p class="text-gray-300 leading-relaxed text-sm sm:text-base">
-                            Satu kemaskini besar akan tiba di dalam permainan <span class="text-yellow-400 font-semibold">Steal a Emoji / Steal the Brainrot</span>! Emoji <strong class="text-yellow-400">"The golden boset" (🔱)</strong> merupakan item yang sangat berkuasa dan nadir. Pastikan anda bersedia untuk merebutnya sebelum pemain lain mengambilnya!
+                            Khabar gembira! Emoji terbaharu <strong class="text-yellow-400">"The golden boset" (🔱)</strong> telah rasmi dicipta dan disepadukan terus ke dalam permainan <span class="text-yellow-400 font-semibold">Steal a Emoji / Steal the Brainrot</span>. Anda boleh masuk ke dalam game sekarang juga untuk mengumpul dan mencuri emoji ini!
                         </p>
 
-                        <!-- Feature highlights -->
+                        <!-- Attribute Cards -->
                         <div class="grid grid-cols-2 gap-4 py-2">
-                            <div class="flex items-center gap-3 bg-gray-800/40 p-3 rounded-xl border border-gray-700/50">
+                            <div class="flex items-center gap-3 bg-gray-800/50 p-3.5 rounded-xl border border-gray-700/60">
                                 <i class="fa-solid fa-bolt text-yellow-400 text-xl"></i>
                                 <div>
                                     <div class="text-xs text-gray-400">Kategori</div>
                                     <div class="text-sm font-bold text-white">Ultra Rare</div>
                                 </div>
                             </div>
-                            <div class="flex items-center gap-3 bg-gray-800/40 p-3 rounded-xl border border-gray-700/50">
+                            <div class="flex items-center gap-3 bg-gray-800/50 p-3.5 rounded-xl border border-gray-700/60">
                                 <i class="fa-solid fa-crown text-amber-400 text-xl"></i>
                                 <div>
                                     <div class="text-xs text-gray-400">Status</div>
@@ -170,9 +171,9 @@
                             </div>
                         </div>
 
-                        <!-- CTA Play Button -->
-                        <div class="pt-4 flex flex-col sm:flex-row gap-4">
-                            <a href="https://qermoris.github.io/steal-the-brainrot/" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto text-center px-8 py-4 rounded-2xl font-orbitron font-black text-lg bg-gradient-to-r from-yellow-400 via-yellow-500 to-amber-600 text-black hover:from-yellow-300 hover:to-amber-500 transition-all duration-300 shadow-xl shadow-yellow-500/25 hover:shadow-yellow-500/40 hover:-translate-y-1 active:translate-y-0 flex items-center justify-center gap-3">
+                        <!-- Main Play Button -->
+                        <div class="pt-2 flex flex-col sm:flex-row gap-4">
+                            <a href="https://qermoris.github.io/steal-the-brainrot/" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto text-center px-8 py-4 rounded-2xl font-orbitron font-black text-lg bg-gradient-to-r from-yellow-400 via-amber-400 to-yellow-500 text-black hover:from-yellow-300 hover:to-amber-400 transition-all duration-300 shadow-xl shadow-yellow-500/25 hover:shadow-yellow-500/40 hover:-translate-y-1 active:translate-y-0 flex items-center justify-center gap-3">
                                 <i class="fa-solid fa-play text-xl"></i>
                                 <span>PLAY THE GAME</span>
                             </a>
@@ -181,60 +182,12 @@
                 </div>
             </section>
 
-            <section class="space-y-6">
-                <div class="flex items-center justify-between border-b border-gray-800 pb-4">
-                    <h3 class="text-xl sm:text-2xl font-bold font-orbitron text-white flex items-center gap-3">
-                        <i class="fa-solid fa-newspaper text-yellow-400"></i>
-                        Berita &amp; Updates
-                    </h3>
-                    <span class="text-xs text-gray-400">Versi Permainan: v1.2.0</span>
-                </div>
-
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                    <!-- News Card 1 -->
-                    <div class="bg-gray-900/60 rounded-2xl p-5 border border-gray-800 hover:border-yellow-500/50 transition duration-300 flex flex-col justify-between">
-                        <div class="space-y-3">
-                            <span class="text-xs font-semibold px-2.5 py-1 rounded bg-purple-500/20 text-purple-300 border border-purple-500/30">UPDATE</span>
-                            <h4 class="font-bold text-lg text-white font-orbitron">Kemaskini 'The Golden Boset'</h4>
-                            <p class="text-sm text-gray-400">Emoji 🔱 bakal diperkenalkan dengan kesan khas dan kuasa unik semasa pertempuran.</p>
-                        </div>
-                        <div class="mt-4 pt-4 border-t border-gray-800 text-xs text-yellow-400 font-semibold">
-                            Status: Coming Soon
-                        </div>
-                    </div>
-
-                    <!-- News Card 2 -->
-                    <div class="bg-gray-900/60 rounded-2xl p-5 border border-gray-800 hover:border-yellow-500/50 transition duration-300 flex flex-col justify-between">
-                        <div class="space-y-3">
-                            <span class="text-xs font-semibold px-2.5 py-1 rounded bg-blue-500/20 text-blue-300 border border-blue-500/30">COMMUNITY</span>
-                            <h4 class="font-bold text-lg text-white font-orbitron">Main Bersama Rakan</h4>
-                            <p class="text-sm text-gray-400">Ajak rakan anda untuk bertanding dan curi emoji sesama sendiri dalam permainan rasmi.</p>
-                        </div>
-                        <div class="mt-4 pt-4 border-t border-gray-800 text-xs text-gray-400">
-                            Aktif Sekarang
-                        </div>
-                    </div>
-
-                    <!-- News Card 3 -->
-                    <div class="bg-gray-900/60 rounded-2xl p-5 border border-gray-800 hover:border-yellow-500/50 transition duration-300 flex flex-col justify-between">
-                        <div class="space-y-3">
-                            <span class="text-xs font-semibold px-2.5 py-1 rounded bg-emerald-500/20 text-emerald-300 border border-emerald-500/30">PERFORMANCES</span>
-                            <h4 class="font-bold text-lg text-white font-orbitron">Peningkatan Server</h4>
-                            <p class="text-sm text-gray-400">Sistem permainan telah dioptimumkan untuk gameplay yang lebih lancar dan laju.</p>
-                        </div>
-                        <div class="mt-4 pt-4 border-t border-gray-800 text-xs text-gray-400">
-                            Selesai
-                        </div>
-                    </div>
-                </div>
-            </section>
-
             <section class="rounded-2xl bg-gradient-to-r from-amber-600/20 via-yellow-500/10 to-amber-600/20 border border-yellow-500/30 p-6 text-center space-y-4">
                 <h3 class="text-xl sm:text-2xl font-bold font-orbitron text-yellow-400">
-                    Bersedia Untuk Bermain "Steal the Brainrot"?
+                    Sertai Game Sekarang &amp; Dapatkan "The Golden Boset"!
                 </h3>
                 <p class="text-sm sm:text-base text-gray-300 max-w-xl mx-auto">
-                    Klik butang di bawah untuk terus ke laman web rasmi game dan mula mengumpul emoji kegemaran anda sekarang!
+                    Kemaskini telah berjalan secara langsung. Klik butang di bawah untuk membuka permainan rasmi dan mulakan pengembaraan anda!
                 </p>
                 <div>
                     <a href="https://qermoris.github.io/steal-the-brainrot/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-8 py-3.5 rounded-xl bg-yellow-400 hover:bg-yellow-300 text-black font-black font-orbitron transition-transform duration-200 hover:scale-105 active:scale-95 shadow-lg shadow-yellow-400/20">
@@ -248,7 +201,7 @@
 
         <footer class="border-t border-gray-800/80 bg-gray-950/80 py-6 text-center text-xs text-gray-500">
             <div class="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-4">
-                <p>© About of the steal the brainrot - Hak Cipta Terpelihara.</p>
+                <p>© About of the steal the brainrot - Official Info Page.</p>
                 <div class="flex items-center gap-4 text-gray-400">
                     <a href="https://qermoris.github.io/steal-the-brainrot/" target="_blank" class="hover:text-yellow-400 transition">Game Link</a>
                     <span>•</span>
@@ -260,7 +213,6 @@
     </div>
 
     <script>
-        // Particle Background Logic
         const canvas = document.getElementById('particles-canvas');
         const ctx = canvas.getContext('2d');
 
@@ -284,7 +236,7 @@
                 this.size = Math.random() * 2 + 1;
                 this.speedX = (Math.random() - 0.5) * 0.5;
                 this.speedY = (Math.random() - 0.5) * 0.5;
-                this.color = Math.random() > 0.4 ? 'rgba(234, 179, 8, ' : 'rgba(168, 85, 247, ';
+                this.color = Math.random() > 0.4 ? 'rgba(234, 179, 8, ' : 'rgba(34, 197, 94, ';
                 this.opacity = Math.random() * 0.5 + 0.2;
             }
 
@@ -322,7 +274,6 @@
             requestAnimationFrame(animateParticles);
         }
 
-        // Initialize when window loads
         window.onload = function() {
             resizeCanvas();
             initParticles();
